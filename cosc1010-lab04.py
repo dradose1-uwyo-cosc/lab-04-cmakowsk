@@ -98,8 +98,16 @@ min_temps = [
 # Write a single for loop to calculate both the average maximum temperature and the average minimum temperature.
 # You cannot use any pre-existing functions (like mean()) and must perform the calculations manually.
 # Output the results of both calculations.
-print((sum(max_temps))/len(max_temps))
-print((sum(min_temps))/len(min_temps))
+max_sum = 0
+min_sum = 0
+number_of_variables=len(min_temps)
+
+for z in range(number_of_variables):
+    max_sum += max_temps[z]
+    min_sum += min_temps[z]
+
+print (f"Laramie's average max temperature is {max_sum/number_of_variables}")
+print (f"Laramie's average max temperature is {min_sum/number_of_variables}")
 # For the next part, determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
 print(max(max_temps))
